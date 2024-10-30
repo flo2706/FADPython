@@ -6,6 +6,7 @@ class Person :
     
     clean_name = lambda name: ''.join([char for char in name if char.isalpha()]).strip().title()
 
+
     @property
     def lastname(self):
         return self.__lastname
@@ -13,8 +14,6 @@ class Person :
     @lastname.setter
     def lastname(self, lastname):
         clean_lastname = Person.clean_name(lastname)
-        if not clean_lastname:
-            raise ValueError("Lastname cannot be empty or contain only invalid characters.")
         self.__lastname = clean_lastname
     
     @property
@@ -37,4 +36,3 @@ class Person :
     def __str__(self) -> str:
         return f"Lastname: {self.lastname}, Firstname: {self.firstname}, Address: {self.address}"
     
-

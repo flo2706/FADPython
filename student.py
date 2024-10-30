@@ -34,5 +34,4 @@ class Student(Person):
         return student_id
     
     def __str__(self) -> str:
-        return super().__str__() + f" , StudentId: {self.student_id}, Course.s: {self.courses}"
-
+        return super().__str__() + f", StudentId: {self.student_id}, Course.s: {self.courses}"
